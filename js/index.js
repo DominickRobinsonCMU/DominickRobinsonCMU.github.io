@@ -17,11 +17,18 @@ function playCenaSound() {
   document.getElementById('cenaSound').play();
 }
 
+function stopCenaSound() {
+  document.getElementById('cenaSound').pause();
+}
+
+function toggleCenaSound() {
+  var audio = document.getElementById('cenaSound');
+  !audio.paused ? audio.pause() : audio.play();
+}
+
 function pressCenaButton() {
   // alert("And his name is...")
   // alert("JOHN CENA!!!")
-  // showCenaGIFs();
-  // hideCenaGIFs();
   toggleCenaGIFs();
-  playCenaSound();
+  toggleCenaSound();
 }
